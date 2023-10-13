@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const blogFetch = axios.create({
-    baseURL: 'https://api-diario-teste.vercel.app'
+    baseURL: 'https://api-blog-hepteto.vercel.app'
 })
 
 export default blogFetch

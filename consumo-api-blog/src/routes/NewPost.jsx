@@ -16,11 +16,8 @@ const NewPost = () => {
   const createPost = async (e) => {
     e.preventDefault()
 
-    const post = {title, body, userId: 1}
-
-    await blogFetch.post('/posts', {
-      body: post
-    })
+    await blogFetch.post('/posts', 
+    { title, body })
 
     navigate('/')
   }
@@ -28,12 +25,10 @@ const NewPost = () => {
   return (
     <div className='new-post'>
 
-          {/* <Link to={`/posts/${post._id}`} className='btn' key={post._id}> */}
           <h2>Novo post</h2>
-            <form onSubmit={(e) => createPost(e)}>           {/* post */}
+            <form onSubmit={(e) => createPost(e)}>
               <div className='form-control'>
-                {/* h2 */}
-                {/* <label htmlFor="title">Título do Post:</label><br /> */}
+
                 <input  type='text' 
                         name='title' 
                         id='title' 
@@ -41,8 +36,6 @@ const NewPost = () => {
                         onChange={(e) => setTitle(e.target.value)}
                 />
               
-                {/* h2 */}
-                {/* <label htmlFor="title">Título do Post:</label><br /> */}
                 <textarea name='body' 
                         id='body' 
                         placeholder='Digite o conteúdo'
@@ -53,15 +46,6 @@ const NewPost = () => {
               </div>
             </form>
 
-            {/* <div className='post' key={post._id}>
-              <h2>{post.title}</h2>
-              <p className='body-btn'>
-                <div className='hr'/><br />
-                {post.body}
-                <br /><br /><div className='hr'/>
-              </p>
-            </div> */}
-          {/* </Link> */}
     </div>
   )
 }

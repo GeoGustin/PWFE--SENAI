@@ -4,12 +4,6 @@
     font-size: 2rem;
 }
 
-/* form {
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
-} */
-
 .form-control {
     display: flex;
     flex-direction: column;

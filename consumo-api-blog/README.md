@@ -1,4 +1,16 @@
-# React + Vite
+# CONSUMIR API
+
+## Começando o projeto
+
+- [x] Criar o projeto `npm create vite@latest` consumoapiblog - Javascript
+- [x] Instalar as dependências `npm i axios react-router-dom`
+- [x] Iniciar o projeto `npm run dev`
+
+- [] Criar uma rota para acessar a API
+
+
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

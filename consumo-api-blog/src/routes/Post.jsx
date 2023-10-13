@@ -2,19 +2,24 @@ import blogFetch from '../axios/config'
 
 import { useState, useEffect } from 'react'
 
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import './Home.css'
 
 const Home = () => {
 
-  const [posts, setPosts] = useState([])
+    const [post, setPost] = useState([])
+console.log('this is the post', post[0])
 
-  const getPosts = async () => {
+const {id} = useParams();
+
+  const getPost = async () => {
+
+    
     
     try {
       
-      const response = await blogFetch.get('/posts')
+      const response = await blogFetch.get(`posts/${_id}`)
 
       const data = response.data;
 
@@ -23,14 +28,15 @@ const Home = () => {
     } catch (error) {
       console.error(error)
     }
-
+    
   }
 
   useEffect(() => {
 
-    getPosts()
+    getPost()
 
   }, [])
+
 
   return (
     <div className='home'>
@@ -51,7 +57,6 @@ const Home = () => {
       )}
     </div>
   )
-
 
 }
 
